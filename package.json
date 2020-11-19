@@ -1,0 +1,18 @@
+{
+    "name": "starter",
+    "private": true,
+    "workspaces": {
+      "packages": [
+        "packages/*"
+      ],
+      "nohoist": []
+    },
+    "scripts": {
+        "android": "yarn workspace mobile android",
+        "ios": "yarn workspace mobile ios",
+        "start": "yarn workspace mobile start"
+      },
+    "dependencies": {
+      "react-native": "0.63.3"
+    }
+  }
