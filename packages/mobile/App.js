@@ -21,7 +21,7 @@ export default class App extends React.Component {
         />
         <Button
           onPress={() => {
-            Toast.sampleMethod('123456', 2, console.log);
+            Toast.show(this.state.text);
           }}
           title="Show Toast"
           color="#841584"

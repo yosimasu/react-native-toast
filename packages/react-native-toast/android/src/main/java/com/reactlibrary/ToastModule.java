@@ -1,5 +1,8 @@
 package com.reactlibrary;
 
+import android.content.Context;
+import android.widget.Toast;
+
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -24,4 +27,10 @@ public class ToastModule extends ReactContextBaseJavaModule {
         // TODO: Implement some actually useful functionality
         callback.invoke("Received numberArgument: " + numberArgument + " stringArgument: " + stringArgument);
     }
+
+  @ReactMethod
+  public void show(String text) {
+    Context context = getReactApplicationContext();
+    Toast.makeText(context,text, Toast.LENGTH_LONG).show();
+  }
 }
